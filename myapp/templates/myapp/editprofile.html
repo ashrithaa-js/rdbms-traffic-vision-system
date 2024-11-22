@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <center>
+        <form method="POST" action="/updateprofile/{{user.violation_id}}/">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <h3>Update Details</h3>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">VIOLATION ID:</label>
+                    <div class="col-sm-4">
+                        <input type="number" name="violation_id" id="violation_id" required maxlength="20" value="{{ user.violation_id }}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">VIOLATION TYPE:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="violation_type" id="violation_type" required maxlength="100" value="{{ user.violation_type }}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">FINE AMOUNT:</label>
+                    <div class="col-sm-4">
+                        <input type="number" name="fine_amount" id="fine_amount" required maxlength="100" value="{{ user.fine_amount }}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">VIOLATION DATE:</label>
+                    <div class="col-sm-4">
+                        <input type="date" name="violation_date" id="violation_date" required maxlength="100" value="{{ user.violation_date }}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">VIOLATION TIME:</label>
+                    <div class="col-sm-4">
+                        <input type="time" name="violation_time" id="violation_time" required maxlength="254" value="{{ user.violation_time  }}" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">LOCATION:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="location" id="location" required maxlength="100" value="{{ user.location }}" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </center>
+</body>
+</html>

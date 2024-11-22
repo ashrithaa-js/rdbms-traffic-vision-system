@@ -1,0 +1,156 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Violation Registration</title>
+</head>
+<body>
+<center>
+    <form name="register" method="post" action="../insertuser/">
+        {% csrf_token %}
+        <pre>
+            Violation ID     : <input type="number" name="tuviolation_id" ><br>
+            Driver ID        : <input type="number" name="tudriver_id" width="200" required> <br>
+            Vehicle ID       : <input type="number" name="tuvehicle_id" width="200" required> <br>
+            Camera ID        : <input type="number" name="tucamera_id" width="200" required> <br>
+            Violation Type   : <input type="text" name="tuviolation_type" width="200" required> <br>
+            Fine Amount      : <input type="number" name="tufine_amount" width="200" required> <br>
+            Violation Date   : <input type="date" name="tuviolation_date" width="200" required> <br>
+            Violation Time   : <input type="time" name="tuviolation_time" width="200" required> <br>
+            Penalty Points    : <input type="number" name="tupenalty_points" width="200" required> <br>
+            Location         : <input type="text" name="tulocation" width="200" required> <br>
+
+        <input type="submit" name="reg" value="Click to register" width="300" height="100"> <br>
+        </pre>
+    </form>
+</center>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* General body styles */
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-color: #1b1b32;
+            color: #f5f6f7;
+            font-family: Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        h1, p {
+            margin: 1em auto;
+            text-align: center;
+        }
+
+        /* Styles for the form */
+        form {
+            width: 60vw;
+            max-width: 500px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding-bottom: 2em;
+        }
+
+        fieldset {
+            border: none;
+            padding: 2rem 0;
+            border-bottom: 3px solid #3b3b4f;
+        }
+
+        fieldset:last-of-type {
+            border-bottom: none;
+        }
+
+        label {
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        input, textarea, select {
+            margin: 10px 0 0 0;
+            width: 100%;
+            min-height: 2em;
+            background-color: #0a0a23;
+            border: 1px solid #0a0a23;
+            color: #ffffff;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 60%;
+            margin: 1em auto;
+            height: 2em;
+            font-size: 1.1rem;
+            background-color: #3b3b4f;
+            border-color: white;
+            min-width: 300px;
+        }
+
+        /* Additional input field styles */
+        input[type="file"] {
+            padding: 1px 2px;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        a {
+            color: #dfdfe2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+        <fieldset>
+            <label for="violation-id">Violation ID:
+                <input id="violation-id" name="violation-id" type="text" required />
+            </label>
+            <label for="driver-id">Driver ID:
+                <input id="driver-id" name="driver-id" type="text" required />
+            </label>
+            <label for="vehicle-id">Vehicle ID:
+                <input id="vehicle-id" name="vehicle-id" type="text" required />
+            </label>
+            <label for="violation-type">Violation Type:
+                <input id="violation-type" name="violation-type" type="text" required />
+            </label>
+            <label for="fine-amount">Fine Amount:
+                <input id="fine-amount" name="fine-amount" type="number" required />
+            </label>
+            <label for="violation-date">Violation Date:
+                <input id="violation-date" name="violation-date" type="date" required />
+            </label>
+            <label for="violation-time">Violation Time:
+                <input id="violation-time" name="violation-time" type="time" required />
+            </label>
+            <label for="camera-id">Camera ID:
+                <input id="camera-id" name="camera-id" type="text" />
+            </label>
+            <label for="penalty-points">Penalty Points:
+                <input id="penalty-points" name="penalty-points" type="number" />
+            </label>
+            <label for="location">Location:
+                <input id="location" name="location" type="text" required />
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Click to register" />
+    </form>
+
+</body>
+</html>

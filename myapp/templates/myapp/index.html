@@ -1,0 +1,136 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TRAFFIC VISION SYSTEM</h1>
+
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Vision System</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url("");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black; /* Changing text color to black */
+      background-color: #e7e7e7; /* Setting a light grey background similar to the button in the image */
+      padding: 5px 10px; /* Slight padding around the text */
+      border: 1px solid #d3d3d3; /* Adding a thin border with a light grey color */
+      border-radius: 3px; /* Smaller border-radius for slight rounding */
+      font-size: 14px; /* Adjusting the font size to be more legible */
+    }
+
+    a:hover {
+      background-color: #cccccc; /* Slight hover effect to make the button more interactive */
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TRAFFIC VISION SYSTEM</h1>
+    <p>Click below to register a traffic violation:</p>
+    <a href="insertuser1">Go to Registration Form</a>
+    <br><br>
+    <p>Click below to view registered traffic violations:</p>
+    <a href="viewusers">View Registered Violations</a>
+  </div>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Vision System</title>
+  {% load static %}
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black; /* Changing text color to black */
+      background-color: #e7e7e7; /* Setting a light grey background similar to the button in the image */
+      padding: 5px 10px; /* Slight padding around the text */
+      border: 1px solid #d3d3d3; /* Adding a thin border with a light grey color */
+      border-radius: 3px; /* Smaller border-radius for slight rounding */
+      font-size: 14px; /* Adjusting the font size to be more legible */
+    }
+
+    a:hover {
+      background-color: #cccccc; /* Slight hover effect to make the button more interactive */
+    }
+  </style>
+</head>
+<body background="{% static 'images/index_img.png' %}">
+  <div class="container">
+    <h1>TRAFFIC VISION SYSTEM</h1>
+    <p>Click below to register a traffic violation:</p>
+    <a href="{% url 'insertuser1' %}">Go to Registration Form</a>
+    <br><br>
+    <p>Click below to view registered traffic violations:</p>
+    <a href="{% url 'viewusers' %}">View Registered Violations</a>
+    <br><br>
+    <p>Click below to view all with fines over $1000</p>
+    <a href="{% url 'traffic_violations_view' %}">View Fine</a>
+  </div>
+</body>
+</html>
